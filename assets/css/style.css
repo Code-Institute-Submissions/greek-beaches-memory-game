@@ -1,0 +1,73 @@
+/* -------------------- Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+/*--------------------- General Styling */
+
+body {
+    background-color: #dfeaf0;
+}
+
+h1 {
+    font-size: 2.05rem;
+    margin-top: 70px;
+    font-family: Montserrat, sans-serif;
+}
+
+p {
+    margin-top: 20px;
+    font-family: Montserrat, sans-serif;
+}
+
+
+
+/* --------------------- Navbar */
+
+#nav-link-info {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+    color: #343d47;
+    font-family: Montserrat, sans-serif;
+}
+
+#nav-link-info:hover {
+    color: grey;
+}
+
+#logo {
+    width: 300px;
+}
+/* put also mediaquery for id logo*/
+
+/*---------------------- Introduction */
+
+#introduction {
+    margin: 60px 60px;
+}
+
+#p2 {
+    margin-top: 50px;
+    font-size: 12px;
+}
+
+/* -------- Buttons */
+
+.buttons-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button, select {
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 200px;
+    margin: 0 20px;
+}
+
+button:hover {
+    background-color: #343d47;
+    color: #fff;
+}
+
