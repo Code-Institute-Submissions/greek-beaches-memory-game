@@ -23,6 +23,12 @@ body {
 
 /* --------------------- Navbar */
 
+.navbar #navbar-inner {
+    text-align: center!important;
+    display:inline-block;
+    float: none;
+}
+
 /* ----------- Footer */
 
 footer {
@@ -61,7 +67,8 @@ footer {
 }
 
 
-/* Button */
+/* Buttons
+credit https://codepen.io/atloomer/pen/JEaRWX */
 
 .button {
   display: inline-flex;
@@ -122,8 +129,5 @@ a {
     display: inline;
 }
 
-#mrg {
-    margin-left: 525px;
-}
 
 
