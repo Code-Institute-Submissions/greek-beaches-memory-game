@@ -11,7 +11,7 @@
 <body>
     <header>
         <!-- Credit for the code used for the navbar: https://getbootstrap.com/docs/4.0/components/navbar/-->
-        <nav class="navbar navbar-light center" id="navbar-inner" style="background-color: #343d47;">
+        <nav class="navbar navbar-light justify-content-center" style="background-color: #343d47;">
                 <ul class="navbar-nav" id="nav-buttons">
                     <li>
                         <div class="button border button-2">
@@ -25,18 +25,17 @@
                             <a href="#">Music</a>
                         </div>
                     </li>
-                    <li class="">
-                        <div class="button border button-2">
-                            <div class="slide"></div>
-                            <a href="#">Beaches info</a>
-                        </div>
-                    </li>
                 </ul>
         </nav>
     </header>
     <section class="container-fluid">
-        <div class="row">
-            
+        <div class="row justify-content-center" id="count-row">
+            <div class="count-button border">
+                <h2>Time: 60</h2>
+            </div>
+            <div class="count-button border">
+                <h2>Flips: 0</h2>
+            </div>
         </div>
             <div class="col-12 game">
                 <div class="card"></div>
@@ -58,7 +57,6 @@
             </div>
     </section>  
 </body>
-<!--
 <footer class="container-fluid">
         <div class="row text-center">
             <div class="col-12">
@@ -66,5 +64,4 @@
             </div>
         </div>
 </footer>
--->
 </html>

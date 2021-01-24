@@ -1,8 +1,7 @@
 /* code to not display extra white space of the right side of website
 credit: https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend */
 
-html,body
-{
+html, body {
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -23,24 +22,44 @@ body {
 
 /* --------------------- Navbar */
 
-.navbar #navbar-inner {
-    text-align: center!important;
-    display:inline-block;
-    float: none;
-}
 
 /* ----------- Footer */
 
 footer {
     background-color: #343d47;
     color: #fafafa;
-    min-height: 100px;
+    min-height: 40px;
     margin: 0;
+    margin-top: 20px;
     font-size: 12px;
 }
 
-/*------------------ Timer */
+footer p {
+    padding-top: 10px;
+}
+/*------------------ Counters */
 
+#count-row {
+    margin: 10px 0;
+}
+
+.count-button {
+    height: 40px;
+    width: 150px;
+    border: 2px solid rgb(133, 134, 134);
+    color: rgb(133, 134, 134);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    color: rgb(133, 134, 134);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
 
 
 /*----------------- Game */
@@ -56,10 +75,9 @@ footer {
 .card {
     display: inline-block;
     background: url('../img/gbg.jpg');
-    width: 8rem;
+    width: 9rem;
     height: 8rem;
     border-radius: 5%;
-    border-color: 6px solid #343d47;
     /* box-shadow trick credit: https://css-tricks.com/almanac/properties/b/box-shadow/ */
     -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
     -moz-box-shadow:    2px 2px 2px 2px rgba(0, 0, 0, 0.4);
@@ -90,7 +108,6 @@ a {
   text-decoration: none;
   letter-spacing: 1px;
 }
-
 
 .button-2 {
   position: relative;
@@ -129,5 +146,38 @@ a {
     display: inline;
 }
 
+/*----- Media Queries */
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 7rem;
+        height: 6rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card {
+        width: 8rem;
+        height: 7rem;
+    }
+    .game {
+        grid-template-columns: repeat(2, auto); 
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    
+    .button {
+        width: 100px;
+    }
+
+    .h2, h2 {
+    font-size: 1.3rem;
+    }
+
+    .count-button {
+        width: 100px; 
+    }
+}
 
 
