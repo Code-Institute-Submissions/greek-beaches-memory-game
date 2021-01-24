@@ -31,7 +31,7 @@ footer {
     min-height: 40px;
     margin: 0;
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 footer p {
@@ -46,19 +46,28 @@ footer p {
 .count-button {
     height: 40px;
     width: 150px;
-    border: 2px solid rgb(133, 134, 134);
     color: rgb(133, 134, 134);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin-left: 2px;
+    padding-top: 2px;
+}
+
+.border {
+    border: 2px;
 }
 
 h2 {
     color: rgb(133, 134, 134);
     text-decoration: none;
     letter-spacing: 1px;
+}
+
+.h2, h2 {
+    font-size: 1.8rem;
 }
 
 
@@ -178,6 +187,12 @@ a {
     .count-button {
         width: 100px; 
     }
+}
+
+/* ----------- Icons */
+
+i.fab:hover {
+    color: white;
 }
 
 
