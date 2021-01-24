@@ -17,76 +17,11 @@ html,body
 
 /*--------------------- General Styling */
 
-.navbar {
-    width: 100%;
-}
-
 body {
-    background-color: #dfeaf0;
+    background-color:#fafafa;
 }
-
-h1 {
-    font-size: 2.05rem;
-    margin-top: 70px;
-    font-family: Montserrat, sans-serif;
-}
-
-p {
-    margin-top: 20px;
-    font-family: Montserrat, sans-serif;
-}
-
-
 
 /* --------------------- Navbar */
-
-#nav-link-info {
-    text-transform: uppercase;
-    font-size: 17px;
-    font-weight: 600;
-    color: #343d47;
-    font-family: Montserrat, sans-serif;
-}
-
-#nav-link-info:hover {
-    color: grey;
-}
-
-#logo {
-    width: 300px;
-}
-/* put also mediaquery for id logo*/
-
-/*---------------------- Introduction */
-
-#introduction {
-    padding: 30px 40px;
-}
-
-#p2 {
-    margin-top: 50px;
-    font-size: 12px;
-}
-
-/* -------- Buttons */
-
-.buttons-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-button, select {
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 200px;
-    margin: 0 20px;
-}
-
-button:hover {
-    background-color: #343d47;
-    color: #fff;
-}
 
 /* ----------- Footer */
 
@@ -100,17 +35,7 @@ footer {
 
 /*------------------ Timer */
 
-.timer {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 600;
-    background: #b6a399;
-    width: 30px;
-    height: 30px;
-    line-height: 28px;
-    border-radius: 50%;
-    text-align: center;
-}
+
 
 /*----------------- Game */
 
@@ -124,16 +49,81 @@ footer {
 
 .card {
     display: inline-block;
+    background: url('../img/gbg.jpg');
     width: 8rem;
     height: 8rem;
-    border-radius: 10%;
+    border-radius: 5%;
+    border-color: 6px solid #343d47;
     /* box-shadow trick credit: https://css-tricks.com/almanac/properties/b/box-shadow/ */
     -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
     -moz-box-shadow:    2px 2px 2px 2px rgba(0, 0, 0, 0.4);
     box-shadow:         2px 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
-.card:hover {
-    background-color: #977f71;
+
+/* Button */
+
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #BFC0C0;
+  color: #BFC0C0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
+
+a {
+  color: #BFC0C0;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+
+.button-2 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button-2 a {
+  position: relative;
+  transition: all .35s ease-Out;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  left: -200px;
+  background: #BFC0C0;
+  position: absolute;
+  transition: all .35s ease-Out;
+  bottom: 0;
+}
+
+.button-2:hover .slide {
+  left: 0;
+}
+
+.button-2:hover a {
+  color: #2D3142;
+}
+
+#nav-buttons {
+    display: inline-block;
+}
+
+#nav-buttons li {
+    display: inline;
+}
+
+#mrg {
+    margin-left: 525px;
+}
+
 
