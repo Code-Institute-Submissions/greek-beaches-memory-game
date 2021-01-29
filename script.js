@@ -5,7 +5,8 @@ let lockBoard = false;
 let firstCard, secondCard;
 
 
-// Functions
+// Functions 
+// Functions flipCard, checkForMatch, disableCards, unFlipCards, resetBoard, shuffle + Eventlistener -> credit: https://marina-ferreira.github.io/projects/js/memory-game/
 
 // Flipping the cards 
 
@@ -25,12 +26,14 @@ function flipCard() {
   checkForMatch();
 }
 
-//Do the cards/data-numbers match?
+//Do the cards/data-frameworks match?
 
 function checkForMatch() {
-    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-    
-    isMatch ? disableCards() : unFlipCards();
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+        disableCards();
+    } else {
+        unflipCards();
+    }
 }
 
 // Cards match -> remove click eventListener so they are not clickable
@@ -55,10 +58,14 @@ function unflipCards() {
   }, 1500);
 }
 
+// Locks the board before the cards flip back
+
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
 }
+
+// Shuffles the cards when page refreshed
 
 (function shuffle() {
   cards.forEach(card => {
