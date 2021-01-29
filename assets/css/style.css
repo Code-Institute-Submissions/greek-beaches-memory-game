@@ -26,9 +26,6 @@ body {
     flex: 1 0 auto;
 }
 
-/* --------------------- Navbar */
-
-
 /* ----------- Footer */
 
 footer {
@@ -80,7 +77,7 @@ h2 {
 /*-------------------------------- Game */
 
 .game {
-    width: 700px;
+    width: 720px;
     height: 550px;
     margin: auto;
     display: flex;
@@ -92,7 +89,7 @@ h2 {
     position: relative;
     width: calc(25% - 10px);
     height: calc(25% - 10px);
-    margin-left: 4px;
+    margin-left: 5px;
     margin-bottom: 2px;
     border-radius: 5%;
     border: 1px solid grey;
