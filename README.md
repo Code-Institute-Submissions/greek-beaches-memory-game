@@ -8,7 +8,6 @@ This game will inspire you to discover more of Greece in a fun way!
 
 
 ## User Experience (UX)
----
 
 ### User stories
 
@@ -42,7 +41,7 @@ If you found all the pairs within 60 seconds, a modal will appear with the amoun
 I wanted to make a modern, symmetric, and visually pleasing looking game. I wanted to avoid it looking childish or mixed with too many colors.
 #### Colour Scheme
  - I've ran a color scheme with a picture of a beach in Milos,Greece that I found on [Pinterest](https://www.pinterest.com/pin/465137467771700654/) through on [imagecolorpicker](https://imagecolorpicker.com/) to find more color options.
-        ![Color Scheme](assets/img/color-scheme.png)
+ ![Color Scheme](assets/img/color-scheme.png)
  - The main colours used are: dark blue/grey (#343d47),grey, white (#fafafa) and blue.
 #### Typography
  - The font-family used is Montserrat. It looks clean and suits visually.
@@ -59,7 +58,6 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
 
 
 ## Features
----
 
 -   Responsive on all device sizes
 -   Interactive elements
@@ -69,7 +67,6 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
 
 
 ## Technologies Used
----
 
 ### Languages Used
 
