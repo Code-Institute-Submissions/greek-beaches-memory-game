@@ -103,7 +103,7 @@ h2 {
     transition: transform .2s;
 }
 
-.memory-card.flip {
+.card.flip {
     transform: rotateY(180deg);
 }
 
