@@ -1,79 +1,87 @@
 // variables
 const cards = document.querySelectorAll('.card');
-let hasFlippedCard = false;
-let lockBoard = false;
-let firstCard, secondCard;
-
+let cardOne, cardTwo;
+cardPair = [cardOne, cardTwo];
+flipped = false;
 
 // Functions 
-// Functions flipCard, checkForMatch, disableCards, unFlipCards, resetBoard, shuffle + Eventlistener -> credit: https://marina-ferreira.github.io/projects/js/memory-game/
+
+// Content loaded
+
+document.addEventListener("DOMContentLoaded", function() {
+    //Show welcome modal 
+    shuffleImages()
+
+    
+});
 
 // Flipping the cards 
 
 function flipCard() {
-  if (lockBoard) return;
-  if (this === firstCard) return;
+    this.classList.add("flip");
 
-  this.classList.add('flip');
+    if(!flipped) {
+        flipped = true;
+        cardOne = this.querySelector('img').src;
+    } else {
+        flippedCard = false;
+        cardTwo = this.querySelector('img').src;
+        
+        checkMatch();
+    }
 
-  if (!hasFlippedCard) {
-    hasFlippedCard = true;
-    firstCard = this;
-
-    return;
-  }
-  secondCard = this;
-  checkForMatch();
 }
 
-//Do the cards/data-frameworks match?
+// Do the cards srcs match?
 
-function checkForMatch() {
-    if (firstCard.dataset.framework === secondCard.dataset.framework) {
-        disableCards();
+function checkMatch() {
+    if (cardPair[0] === cardPair[1]) {
+
+    cardOne.removeEventListener('click', flipCard);
+    cardTwo.removeEventListener('click', flipCard);
+
+    //matchCounter = i++
+
     } else {
-        unflipCards();
+
+        setTimeout(() => {
+        cardOne.classList.remove('flip');
+        cardTwo.classList.remove('flip');
+        }, 1300);
+    }
+
+}
+
+// function to lock the board before unFlip 
+
+
+// Shuffles the images
+
+function shuffleImages() {
+    let srcs = ['cards/apelles.jpg', 'cards/apelles.jpg', 'cards/gidaki.jpg', 'cards/gidaki.jpg', 'cards/kolona.jpg', 'cards/kolona.jpg', 'cards/stravnam.png', 'cards/stravnam.png', 'cards/myrtos.jpg', 'cards/myrtos.jpg', 'cards/navagio.jpg', 'cards/navagio.jpg', 'cards/porto-katsiki.jpg', 'cards/porto-katsiki.jpg', 'cards/voutoumi.jpg', 'cards/voutoumi.jpg'];
+    let randomPos, temp;
+
+    for (let i = srcs.length - 1; i > 0; i--) {
+        randomPos = Math.floor(Math.random() * (i + 1));
+        temp = srcs[i];
+        srcs[i] = srcs[randomPos];
+        srcs[randomPos] = temp;
+        cards.forEach(card => card.querySelector('img').setAttribute("src", srcs[i]));
     }
 }
 
-// Cards match -> remove click eventListener so they are not clickable
+//Win game
 
-function disableCards() {
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
+// if (matchCounter = 8) {
+//    showModal for win
+// }
 
-    resetBoard();
-}
+//Game over
 
-// Cards do not match -> remove flip class so they flip back
-
-function unflipCards() {
-  lockBoard = true;
-
-  setTimeout(() => {
-    firstCard.classList.remove('flip');
-    secondCard.classList.remove('flip');
-
-    resetBoard();
-  }, 1500);
-}
-
-// Locks the board before the cards flip back
-
-function resetBoard() {
-  [hasFlippedCard, lockBoard] = [false, false];
-  [firstCard, secondCard] = [null, null];
-}
-
-// Shuffles the cards when page refreshed
-
-(function shuffle() {
-  cards.forEach(card => {
-    let changePosition = Math.floor(Math.random() * 16);
-    card.style.order = changePosition;
-  });
-})();
+//if (timer = 0) {
+// show modal for game over
+// }
 
 // Event Listeners
-
 cards.forEach(card => card.addEventListener('click', flipCard));
+
