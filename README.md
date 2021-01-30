@@ -77,27 +77,25 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
 ### Frameworks, Libraries & Programs Used
 
 1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-    - Bootstrap was used to assist with the responsiveness and styling of the website and to make the navbar.
+    was used to assist with the responsiveness and styling of the website and to make the navbar.
 2. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the font-family 'Montserrat' into the style.css file.
+    were used to import the font-family 'Montserrat' into the style.css file.
 3. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used to add social media icons in the footer.
-4. [jQuery:](https://jquery.com/)
-    - jQuery came with Bootstrap to make the navbar responsive.
-5. [Git](https://git-scm.com/)
-    - Git was used for version control. In the terminal of Gitpod, I used Git to add and commit to Git and after pushing it to Github.
+    was used to add social media icons in the footer.
+5. [Git:](https://git-scm.com/)
+    was used for version control. In the terminal of Gitpod, I used Git to add and commit to Git and after pushing it to Github.
 6. [GitHub:](https://github.com/)
-    - GitHub is used to store and share my project.
+    is used to store and share my project.
 8. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the wireframes during the design process.
+    was used to create the wireframes during the design process.
 9. [TinyPNG:](https://tinypng.com/)
-    - TinyPNG was used to compress the images.
+    was used to compress the images.
 10. [Redketchup:](https://redketchup.io/image-resizer) 
-    - Redketchup was used to resize the images.
+    was used to resize the images.
 11. [Freefrontend:](https://freefrontend.com/css-buttons/)
-    - Freefrontend was used to find the interactive buttons.
+    was used to find the interactive buttons.
 12. [Photopea:](https://www.photopea.com/)
-    - Photopea is an online photo editor and I used it to improve the colors of the background of the cards.
+    is an online photo editor and I used it to improve the colors of the background of the cards.
 
 
 
