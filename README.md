@@ -24,7 +24,7 @@ This game will inspire you to discover more of Greece in a fun way!
 
 
 ### Strategy
-The goal of this website is to make a fun but visually pleasing memory game to inspire them to discover more of Greece.
+The goal of this website is to make a fun but visually pleasing memory game to inspire the players to discover more of Greece.
 
 ### Scope
 Instead of using well known greek beaches, the cards shows less touristic and less known beaches to amaze the players with every click.
@@ -48,13 +48,13 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
 #### Imagery
  - Background of the card has a greek themed pattern, but looks sleak, modern and clean.
  - Pictures chosen for the beaches are meant to amaze the player.
- - The favicon represents the background of the cards but smaller. So when users see this in their browser their reminded of the style of the game.
+ - The favicon represents the background of the cards but smaller. So when users see this in their browser they are reminded of the style of the game.
 
 
 ### Skeleton
-- Desktop, tablet and phone Wireframes of the game - [View](assets/img/wireframe1.jpg)
-- Start modal wireframes - [View](assets/img/wireframe2.jpg)
-- Win and game over wireframes - [View](assets/img/wireframe3.jpg)
+- Desktop, tablet and phone Wireframes of the game - [View](/assets/img/wireframe1.jpg)
+- Start modal wireframes - [View](/assets/img/wireframe2.jpg)
+- Win and game over wireframes - [View](/assets/img/wireframe3.jpg)
 
 
 ## Features
