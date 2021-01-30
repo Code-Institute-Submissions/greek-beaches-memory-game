@@ -120,6 +120,10 @@ h2 {
   transform: rotateY(180deg);
 }
 
+.back {
+    background: url('../img/cards-bg.jpg')
+}
+
 
 /* --------------------------------- Buttons
 credit https://codepen.io/atloomer/pen/JEaRWX */
