@@ -1,8 +1,8 @@
 // variables
 const cards = document.querySelectorAll('.card');
 let cardOne, cardTwo;
-cardPair = [cardOne, cardTwo];
-flipped = false;
+let cardPair = [cardOne, cardTwo];
+let flipped = false;
 
 // Functions 
 
@@ -10,7 +10,7 @@ flipped = false;
 
 document.addEventListener("DOMContentLoaded", function() {
     //Show welcome modal 
-    shuffleImages()
+    shuffleImages();
 
     
 });
@@ -68,9 +68,9 @@ function shuffleImages() {
         temp = srcs[i];
         srcs[i] = srcs[randomPos];
         srcs[randomPos] = temp;
-        cards.forEach(card => card.querySelector('img').setAttribute("src", srcs[i]));
     }
 }
+cards.forEach(card => card.querySelector('img').setAttribute("src", srcs[i]));
 
 //Win game
 
