@@ -4,6 +4,7 @@ let cardOne, cardTwo;
 let flipped = false;
 let cardMatches = [];
 let blockCards = false;
+counter = 1;
 
 
 // Functions 
@@ -13,16 +14,20 @@ let blockCards = false;
 document.addEventListener("DOMContentLoaded", function() {
     //Show welcome modal 
     shuffleImages();
-
     
 });
 
 // Flipping the cards 
 
-function flipCard() {
+function flip() {
+
     if (blockCards) return;
     if (this === cardOne) return;
+    
     this.style.transform = 'rotateY(180deg)';
+
+    document.getElementById('counter').innerText = counter;
+    counter++;
    
 
     if(!flipped) {
@@ -94,6 +99,7 @@ function shuffleImages() {
         }
 }
 
+//
 
 //Win game
 
@@ -108,5 +114,5 @@ function shuffleImages() {
 // }
 
 // Event Listeners
-cards.forEach(card => card.addEventListener('click', flipCard));
+cards.forEach(card => card.addEventListener('click', flip));
 
