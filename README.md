@@ -1,6 +1,6 @@
 <h1 align="center">Greek Beaches Memory Game</h1>
 
-For my milestone project 2, I have made a memory game with a greek theme.
+For my milestone project 2, I have made a memory card game with a greek theme.
 With every card you click you will discover another beautiful beach in Greece. 
 For this game I have chosen my favourite, less touristic and less known beaches around Greece.
 This game will inspire you to discover more of Greece in a fun way!
@@ -20,7 +20,7 @@ This game will inspire you to discover more of Greece in a fun way!
     4. I want to have the option to restart the game if I feel like I failed halfway.
     5. I want the website and the cards to be visually pleasing.
     6. When I don't finish the game in time, I want to easily restart the game.
-    7. When I win the game, I want to see in how much and flips I finished the game and restart if I want to improve.
+    7. When I win the game, I want to see in how much time and flips I finished the game and restart if I want to improve.
 
 
 ### Strategy
@@ -41,7 +41,7 @@ If you found all the pairs within 60 seconds, a modal will appear with the amoun
 I wanted to make a modern, symmetric, and visually pleasing looking game. I wanted to avoid it looking childish or mixed with too many colors.
 #### Colour Scheme
  - I've ran a color scheme with a picture of a beach in Milos,Greece that I found on [Pinterest](https://www.pinterest.com/pin/465137467771700654/) through on [imagecolorpicker](https://imagecolorpicker.com/) to find more color options.
- - The main colours used are: dark blue/grey (#343d47),grey, white (#fafafa) and blue.
+ - The main colours used are: dark blue/grey (#343d47), grey, white (#fafafa) and blue.
  ![Color Scheme](assets/img/color-scheme.png)
 #### Typography
  - The font-family used is Montserrat. It looks clean and suits visually.
