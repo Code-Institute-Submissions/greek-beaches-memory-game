@@ -103,9 +103,6 @@ h2 {
     transition: transform .2s;
 }
 
-.card.flip {
-    transform: rotateY(180deg);
-}
 
 .front,
 .back {

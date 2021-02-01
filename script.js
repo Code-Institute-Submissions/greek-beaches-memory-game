@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function flipCard() {
     if (blockCards) return;
     if (this === cardOne) return;
-    this.classList.add('flip');
+    this.style.transform = 'rotateY(180deg)';
    
 
     if(!flipped) {
@@ -48,14 +48,13 @@ function checkMatch() {
 
     cardMatches.push(cardOne);
     cardMatches.push(cardTwo);
-    console.log(cardMatches);
 
     } else {
         blockCards = true;
 
         setTimeout(() => {
-        cardOne.classList.remove('flip');
-        cardTwo.classList.remove('flip');
+        cardOne.style.transform = 'rotateY(0deg)';
+        cardTwo.style.transform = 'rotateY(0deg)';
 
         reset();
         }, 1300);
