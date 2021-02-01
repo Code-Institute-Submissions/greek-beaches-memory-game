@@ -1,8 +1,9 @@
 // variables
 const cards = document.querySelectorAll('.card');
 let cardOne, cardTwo;
-//let cardPair = []
 let flipped = false;
+let cardMatches = [];
+let blockCards = false;
 
 
 // Functions 
@@ -19,19 +20,18 @@ document.addEventListener("DOMContentLoaded", function() {
 // Flipping the cards 
 
 function flipCard() {
+    if (blockCards) return;
+    if (this === cardOne) return;
     this.classList.add('flip');
    
 
     if(!flipped) {
         flipped = true;
         cardOne = this;
-        console.log(cardOne);
-        //cardPair.push(cardOne);
+
     } else {
         flipped = false;
         cardTwo = this;
-        console.log(cardTwo);
-        //cardPair.push(cardTwo);
         
         checkMatch();
     }
@@ -42,19 +42,36 @@ function flipCard() {
 
 function checkMatch() {
     if (cardOne.childNodes[1].src === cardTwo.childNodes[1].src) {
+
     cardOne.removeEventListener('click', flipCard);
     cardTwo.removeEventListener('click', flipCard);
 
+    cardMatches.push(cardOne);
+    cardMatches.push(cardTwo);
+    console.log(cardMatches);
+
     } else {
+        blockCards = true;
+
         setTimeout(() => {
         cardOne.classList.remove('flip');
         cardTwo.classList.remove('flip');
+
+        reset();
         }, 1300);
     }
 
 }
 
-// function to lock the board before unFlip 
+// Resets the variables
+
+function reset() {
+
+    flipped = false;
+    blockCards = false;
+    cardOne = null;
+    cardTwo = null;
+}
 
 
 // Shuffles the images
@@ -66,17 +83,14 @@ function shuffleImages() {
     let imgs = document.getElementsByTagName('img');
     let randomPos, temp;
 
-    //cards.forEach((card) => {
         for (let i = srcs.length - 1; i > 0; i--) {
             randomPos = Math.floor(Math.random() * (i + 1));
             temp = srcs[i];
             srcs[i] = srcs[randomPos];
             srcs[randomPos] = temp;
-            // cards.forEach(card => card.querySelector('img').setAttribute("src", srcs[i]));
-            //card.childNodes[1].src = srcs[i]
         }
-    // });
-        for(let i=0; i<imgs.length; i++) {
+
+        for(let i = 0; i < imgs.length; i++) {
             imgs[i].src = srcs[i]
         }
 }
@@ -84,7 +98,7 @@ function shuffleImages() {
 
 //Win game
 
-// if (matchCounter = 8) {
+// if (cardMatches.length = 16) {
 //    showModal for win
 // }
 
