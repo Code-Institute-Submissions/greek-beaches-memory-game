@@ -1,30 +1,55 @@
-// variables
+// --------------------- Variables
+
 const cards = document.querySelectorAll('.card');
+let timer = document.getElementById("timer");
+let restartButton = document.getElementById("restart-button");
 let cardOne, cardTwo;
 let flipped = false;
-let cardMatches = [];
 let blockCards = false;
+let cardMatches = [];
 counter = 1;
 
 
-// Functions 
+// --------------------- Functions 
 
 // Content loaded
 
 document.addEventListener("DOMContentLoaded", function() {
     //Show welcome modal 
     shuffleImages();
-    
+    startTimer();
+    timeLeft = 60;
 });
+
+// Restarts the game when you click on the Restart button
+
+function restart() {
+
+}
+
+// Starts the 60 seconds countdown
+
+function startTimer() {
+        var interval = setInterval(() => {
+            timeLeft--;
+            timer.innerText = timeLeft;
+            if (timeLeft === 0) {
+                clearInterval(interval);
+            };
+        }, 1000);
+    };
 
 // Flipping the cards 
 
 function flip() {
 
     if (blockCards) return;
+
     if (this === cardOne) return;
-    
+
+    setTimeout(() => {
     this.style.transform = 'rotateY(180deg)';
+    }, 150);
 
     document.getElementById('counter').innerText = counter;
     counter++;
@@ -43,28 +68,42 @@ function flip() {
 
 }
 
-// Do the cards srcs match?
+// Do the card's src's match?
 
 function checkMatch() {
     if (cardOne.childNodes[1].src === cardTwo.childNodes[1].src) {
 
-    cardOne.removeEventListener('click', flipCard);
-    cardTwo.removeEventListener('click', flipCard);
+        match();
+    
+    } else {
+        
+        unMatch();
+    }
+}
+
+// Cards Match so push them in the cardPair array
+
+function match() {
+
+    cardOne.removeEventListener('click', flip);
+    cardTwo.removeEventListener('click', flip);
 
     cardMatches.push(cardOne);
     cardMatches.push(cardTwo);
+}
 
-    } else {
-        blockCards = true;
+// Cards do not match so unlfip them
 
-        setTimeout(() => {
-        cardOne.style.transform = 'rotateY(0deg)';
-        cardTwo.style.transform = 'rotateY(0deg)';
+function unMatch() {
 
-        reset();
-        }, 1300);
-    }
+    blockCards = true;
 
+    setTimeout(() => {
+    cardOne.style.transform = 'rotateY(0deg)';
+    cardTwo.style.transform = 'rotateY(0deg)';
+
+    reset();
+    }, 1300);
 }
 
 // Resets the variables
@@ -78,7 +117,7 @@ function reset() {
 }
 
 
-// Shuffles the images
+// Shuffles the src links
 
 function shuffleImages() {
     let srcs = ['cards/apelles.jpg', 'cards/apelles.jpg', 'cards/gidaki.jpg', 'cards/gidaki.jpg', 'cards/kolona.jpg', 'cards/kolona.jpg', 
@@ -99,20 +138,19 @@ function shuffleImages() {
         }
 }
 
-//
 
 //Win game
 
 // if (cardMatches.length = 16) {
 //    showModal for win
+//    stop timer
 // }
 
-//Game over
-
-//if (timer = 0) {
+// function gameOver()
 // show modal for game over
-// }
 
 // Event Listeners
 cards.forEach(card => card.addEventListener('click', flip));
+restartButton.addEventListener('click', restart)
+
 
