@@ -10,6 +10,7 @@
     <title>Greek Beaches Memory Game</title>
 </head>
 <body>
+    <!-- Navbar -->
     <header>
         <!-- Credit for the code used for the navbar: https://getbootstrap.com/docs/4.0/components/navbar/-->
         <nav class="navbar navbar-light justify-content-center" style="background-color: #343d47;">
@@ -29,7 +30,51 @@
                 </ul>
         </nav>
     </header>
+    <!-- Navbar -->
+    <!-- Win Modal -->
+    <div class="modal justify-content-center" id="win-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Well Done!</h6>
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Start Again</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Win Modal -->
+    <!-- Game Over Modal -->
+    <div class="modal justify-content-center" id="game-over-modal" data-show="true" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Time's Up!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Unfortunately you ran out of time. Try again!.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Start Again</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Game Over Modal -->
+    <!-- Card Game Container --> 
     <section class="container-fluid game-container">
+        <!-- Counters -->
         <div class="row justify-content-center" id="count-row">
             <div class="count-button border">
                 <h2>Time: <span id="timer">60</span></h2>
@@ -38,6 +83,8 @@
                 <h2>Flips: <span id="counter">0</span></h2>
             </div>
         </div>
+        <!-- Counters -->
+        <!-- Card Game -->
             <div class="col-12 game justify-content-center">
                 <div class="card">
                     <img class="front" src=" " />
@@ -104,7 +151,10 @@
                     <div class="back"></div>
                 </div>
             </div>
+            <!-- Card Game -->
     </section> 
+    <!-- Card Game Container -->
+    <!-- Footer -->
     <footer class="container-fluid">
         <div class="row text-center">
             <div class="col-12">
@@ -115,6 +165,12 @@
             </div>
         </div>
     </footer> 
+    <!-- Footer -->
+    <!-- JS/JQuery -->
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- JS/JQuery -->
 </body>
 </html>

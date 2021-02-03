@@ -189,7 +189,17 @@ i.fab:hover {
     color: white;
 }
 
+/* ------------------------------- Modals */
 
+.modal-backdrop {
+  background-color: transparent !important;
+}
+
+.modal-content {
+    background: rgb(133, 134, 134);
+    color: #fafafa;
+    font-size: 'Montserrat', sans-serif;
+}
 /*------------------------------- Media Queries */
 
 @media only screen and (max-width: 600px) {

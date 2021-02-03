@@ -13,7 +13,6 @@ let timeLeft;
 let interval;
 counter = 1;
 
-
 // --------------------- Functions 
 
 // Content loaded
@@ -23,23 +22,40 @@ document.addEventListener("DOMContentLoaded", function() {
     shuffleImages();
     startTimer();
     timeLeft = 60;
+    this.audioController.startBgMusic();
 });
 
-// Restarts the game when you click on the Restart button
+// Refreshes the page when clicked on the restart button
 
 function restart() {
-    shuffleImages();
-    clearInterval(interval);
-    startTimer();
-    counter = 1;
-    counter++;
-    cards.style.transform = 'rotateY(0deg)';
+    location.reload();
+}
+
+//music
+
+class audioController {
+    constructor() {
+        this.bgAudio = new Audio('assets/audio/greek.mp3');
+        this.flipSound = new Audio('assets/audio/card-flip.mp3');
+        this.loseSound = new Audio('assets/audio/lose.mp3');
+        this.winSound = new Audio('assets/audio/win.mp3');
+        this.bgAudio.volume = 0.3;
+        this.bgAudio.loop = true;
+    }
+}
+
+function startBgMusic() {
+    bgAudio.play();
+}
+
+function flipSound() {
+    flipSound.play();
 }
 
 // Starts the 60 seconds countdown
 
 function startTimer() {
-        var interval = setInterval(() => {
+        interval = setInterval(() => {
             timeLeft--;
             timer.innerText = timeLeft;
             if (timeLeft === 0) {
@@ -51,6 +67,8 @@ function startTimer() {
 // Flipping the cards 
 
 function flip() {
+    
+    this.audioController.flipSound();
 
     if (blockCards) return;
 
