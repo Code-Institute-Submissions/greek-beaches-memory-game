@@ -3,10 +3,14 @@
 const cards = document.querySelectorAll('.card');
 let timer = document.getElementById("timer");
 let restartButton = document.getElementById("restart-button");
+
 let cardOne, cardTwo;
 let flipped = false;
 let blockCards = false;
 let cardMatches = [];
+let counter;
+let timeLeft;
+let interval;
 counter = 1;
 
 
@@ -24,7 +28,12 @@ document.addEventListener("DOMContentLoaded", function() {
 // Restarts the game when you click on the Restart button
 
 function restart() {
-
+    shuffleImages();
+    clearInterval(interval);
+    startTimer();
+    counter = 1;
+    counter++;
+    cards.style.transform = 'rotateY(0deg)';
 }
 
 // Starts the 60 seconds countdown
@@ -34,10 +43,10 @@ function startTimer() {
             timeLeft--;
             timer.innerText = timeLeft;
             if (timeLeft === 0) {
-                clearInterval(interval);
-            };
+               clearInterval(interval);
+            }
         }, 1000);
-    };
+    }
 
 // Flipping the cards 
 
@@ -49,7 +58,7 @@ function flip() {
 
     setTimeout(() => {
     this.style.transform = 'rotateY(180deg)';
-    }, 150);
+    }, 120);
 
     document.getElementById('counter').innerText = counter;
     counter++;
@@ -103,7 +112,7 @@ function unMatch() {
     cardTwo.style.transform = 'rotateY(0deg)';
 
     reset();
-    }, 1300);
+    }, 1100);
 }
 
 // Resets the variables
@@ -134,7 +143,7 @@ function shuffleImages() {
         }
 
         for(let i = 0; i < imgs.length; i++) {
-            imgs[i].src = srcs[i]
+            imgs[i].src = srcs[i];
         }
 }
 
@@ -151,6 +160,6 @@ function shuffleImages() {
 
 // Event Listeners
 cards.forEach(card => card.addEventListener('click', flip));
-restartButton.addEventListener('click', restart)
+restartButton.addEventListener('click', restart);
 
 
