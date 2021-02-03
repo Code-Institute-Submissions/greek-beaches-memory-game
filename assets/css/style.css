@@ -192,7 +192,7 @@ i.fab:hover {
 /* ------------------------------- Modals */
 
 .modal-backdrop {
-  background-color: transparent !important;
+  background-color: rgb(133, 134, 134, O.5) !important;
 }
 
 .modal-content {

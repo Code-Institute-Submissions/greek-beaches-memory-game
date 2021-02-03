@@ -13,16 +13,15 @@ let timeLeft;
 let interval;
 counter = 1;
 
+
 // --------------------- Functions 
 
 // Content loaded
 
-document.addEventListener("DOMContentLoaded", function() {
-    //Show welcome modal 
+document.addEventListener("DOMContentLoaded", function() { 
     shuffleImages();
     startTimer();
     timeLeft = 60;
-    this.audioController.startBgMusic();
 });
 
 // Refreshes the page when clicked on the restart button
@@ -31,25 +30,33 @@ function restart() {
     location.reload();
 }
 
-//music
-
-class audioController {
-    constructor() {
-        this.bgAudio = new Audio('assets/audio/greek.mp3');
-        this.flipSound = new Audio('assets/audio/card-flip.mp3');
-        this.loseSound = new Audio('assets/audio/lose.mp3');
-        this.winSound = new Audio('assets/audio/win.mp3');
-        this.bgAudio.volume = 0.3;
-        this.bgAudio.loop = true;
-    }
-}
+// --------------------- music
 
 function startBgMusic() {
+    var bgAudio = new Audio('assets/audio/greek.mp3');
     bgAudio.play();
+    bgAudio.volume = 0.3;
+    bgAudio.loop = true;
+}
+
+function stopMusic() {
+    var bgAudio = new Audio('assets/audio/greek.mp3');
+    bgAudio.pause();
 }
 
 function flipSound() {
+    var flipSound = new Audio('assets/audio/card-flip.mp3');
     flipSound.play();
+}
+
+function gameOverSound() {
+    var gameOverAudio = new Audio('assets/audio/lose.mp3');
+    gameOverAudio.play();
+}
+
+function winSound() {
+    var winAudio = new Audio('assets/audio/win.mp3');
+    winAudio.play();
 }
 
 // Starts the 60 seconds countdown
@@ -60,6 +67,7 @@ function startTimer() {
             timer.innerText = timeLeft;
             if (timeLeft === 0) {
                clearInterval(interval);
+               gameOver();
             }
         }, 1000);
     }
@@ -68,7 +76,7 @@ function startTimer() {
 
 function flip() {
     
-    this.audioController.flipSound();
+    flipSound();
 
     if (blockCards) return;
 
@@ -117,6 +125,10 @@ function match() {
 
     cardMatches.push(cardOne);
     cardMatches.push(cardTwo);
+    
+    if (cardMatches.length === 16) {
+    winGame();
+    }
 }
 
 // Cards do not match so unlfip them
@@ -165,19 +177,26 @@ function shuffleImages() {
         }
 }
 
+console.log(cardMatches);
 
-//Win game
 
-// if (cardMatches.length = 16) {
-//    showModal for win
-//    stop timer
-// }
+function winGame() {
+        clearInterval(interval);
+        winSound();
+        $('#win-modal').modal('show');
+}
 
-// function gameOver()
-// show modal for game over
+function gameOver() {
+        gameOverSound();
+        stopMusic();
+        $('#game-over-modal').modal('show');
+}
+
 
 // Event Listeners
 cards.forEach(card => card.addEventListener('click', flip));
 restartButton.addEventListener('click', restart);
+//let musicBtn = document.getElementById('music-btn');
+//musicBtn.addEventListener('click', startBgMusic);
 
 
