@@ -32,15 +32,15 @@ function restart() {
 
 // --------------------- music
 
+var bgAudio = new Audio('assets/audio/greek.mp3');
+
 function startBgMusic() {
-    var bgAudio = new Audio('assets/audio/greek.mp3');
     bgAudio.play();
     bgAudio.volume = 0.3;
     bgAudio.loop = true;
 }
 
 function stopMusic() {
-    var bgAudio = new Audio('assets/audio/greek.mp3');
     bgAudio.pause();
 }
 
@@ -177,20 +177,25 @@ function shuffleImages() {
         }
 }
 
-console.log(cardMatches);
 
-
-function winGame() {
+function winGame() { 
+    setTimeout(() => {       
+        stopMusic();
         clearInterval(interval);
         winSound();
         $('#win-modal').modal('show');
+    }, 1000);
 }
 
 function gameOver() {
-        gameOverSound();
+    setTimeout(() => {
         stopMusic();
+        gameOverSound();
         $('#game-over-modal').modal('show');
+    }, 1000);
 }
+
+
 
 
 // Event Listeners
