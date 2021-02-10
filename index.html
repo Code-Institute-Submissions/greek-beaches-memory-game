@@ -22,9 +22,9 @@
                         </div>
                     </li>
                     <li class="">
-                        <div class="button border button-2" id="music-btn" onclick="startBgMusic()">
+                        <div class="button border button-2" id="music-btn">
                             <div class="slide"></div>
-                            <a href="#">Music <i class="fa fa-volume-mute"></i></a>
+                            <a href="#">Music <i id="music-icon" class="fas fa-volume-mute"></i></a>
                         </div>
                     </li>
                 </ul>
@@ -43,7 +43,7 @@
                     </button>
                 </div>
                 <div class="modal-body text-center">
-                    <p></p>
+                    <p id="win-text"></p>
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="restart()">Start Again</button>

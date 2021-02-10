@@ -33,6 +33,24 @@ function restart() {
 // --------------------- music
 
 var bgAudio = new Audio('assets/audio/greek.mp3');
+var flipSound = new Audio('assets/audio/card-flip.mp3');
+var gameOverAudio = new Audio('assets/audio/lose.mp3');
+
+// checks if the music is on or off 
+
+let musicIcon = document.getElementById('music-icon');
+
+function bgMusic() {
+    if (musicIcon.classList === "fa-volume-mute") {
+        musicIcon.classList.remove("fa-volume-mute");
+        musicIcon.classList.add("fa-play");
+        startBgMusic();
+    } else {
+        musicIcon.classList.remove("fa-play");
+        musicIcon.classList.add("fa-volume-mute");
+        stopMusic();
+    }
+}
 
 function startBgMusic() {
     bgAudio.play();
@@ -45,12 +63,10 @@ function stopMusic() {
 }
 
 function flipSound() {
-    var flipSound = new Audio('assets/audio/card-flip.mp3');
     flipSound.play();
 }
 
 function gameOverSound() {
-    var gameOverAudio = new Audio('assets/audio/lose.mp3');
     gameOverAudio.play();
 }
 
@@ -181,11 +197,13 @@ function shuffleImages() {
 function winGame() { 
     setTimeout(() => {       
         stopMusic();
+        document.getElementById("win-text").innerText = `You have finished the game with ${timeLeft} seconds remaining, and with ${counter} flips!`;
         clearInterval(interval);
         winSound();
         $('#win-modal').modal('show');
     }, 1000);
 }
+
 
 function gameOver() {
     setTimeout(() => {
@@ -201,7 +219,7 @@ function gameOver() {
 // Event Listeners
 cards.forEach(card => card.addEventListener('click', flip));
 restartButton.addEventListener('click', restart);
-//let musicBtn = document.getElementById('music-btn');
-//musicBtn.addEventListener('click', startBgMusic);
+let musicBtn = document.getElementById('music-btn');
+musicBtn.addEventListener('click', bgMusic);
 
 
