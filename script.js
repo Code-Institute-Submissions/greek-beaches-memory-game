@@ -1,3 +1,7 @@
+// Inspiration for the shuffle function https://www.youtube.com/watch?v=QrTCHHhoUQU&ab_channel=codeTonight
+
+// Inspiration on the flip, match and reset functions https://www.youtube.com/watch?v=ZniVgo8U7ek&ab_channel=freeCodeCamp.org
+
 // --------------------- Variables
 
 const cards = document.querySelectorAll('.card');
@@ -50,6 +54,8 @@ function bgMusic() {
         stopMusic();
     }
 }
+
+// functions to play the background music and sound effects
 
 function startBgMusic() {
     bgAudio.play();
@@ -133,7 +139,7 @@ function checkMatch() {
     }
 }
 
-// Cards Match so push them in the cardPair array
+// Cards match so push them in the cardPair array
 
 function match() {
 
@@ -194,6 +200,7 @@ function shuffleImages() {
         }
 }
 
+// Shows a modal when the game is won
 
 function winGame() { 
     setTimeout(() => {       
@@ -205,6 +212,7 @@ function winGame() {
     }, 1000);
 }
 
+// Shows a modal when the game is lost
 
 function gameOver() {
     setTimeout(() => {
