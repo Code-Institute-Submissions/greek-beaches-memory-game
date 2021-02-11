@@ -24,18 +24,19 @@ This game will inspire you to discover more of Greece in a fun way!
 
 
 ### Strategy
-The goal of this website is to make a fun but visually pleasing memory game to inspire the players to discover more of Greece.
+The goal of this website is to make a fun, challenging, and visually pleasing memory game to inspire the players to discover more of Greece.
 
 ### Scope
-Instead of using well known greek beaches, the cards shows less touristic and less known beaches to amaze the players with every click.
+Instead of using pictures of well known greek beaches, the cards shows less touristic and less known beaches to amaze the players with every click.
+The game is challenging because the pictures of the beaches look similar and you only have 60 seconds to find them all.
 
 ### Structure
-When opening the website you will be welcomed by a Modal with an opaque overlay, which will give you game instructions and a button to start the game.
-The game will have a navbar with 2 modern looking buttons in the middle. One to restart the game, if wanted, and the other one to play or pause the music.
-The game container has 4x4 cards with a greek style but simple background. The cards will be as wide as possible to prevent pixellation.
-Above the cards you will find the timer and the flip counter.
+When opening the website you will be welcomed by a landing page, which will show a very nice background and a jumbotron with the game instructions and a button to start the game.
+The game will have a navbar with 2 modern looking buttons in the middle. One to restart the game, and the other one to start or pause the music.
+Music will not autoplay for a better user experience. The game container has 4x4 cards with a greek style but simple background. 
+The cards will be as wide as possible to prevent pixellation. Above the cards you will find the timer and the flip counter.
 Once you win or you run out of time, there will be a modal. When the time's is up, it will give you the option to start again.
-If you found all the pairs within 60 seconds, a modal will appear with the amount of flips, how many seconds it took you to find all the cards and a button to start the game again.
+If you found all the pairs within 60 seconds, a modal will appear with the amount of flips, and how many seconds it took you to find all the cards and a button to start the game again.
 
 ### Surface
 I wanted to make a modern, symmetric, and visually pleasing looking game. I wanted to avoid it looking childish or mixed with too many colors.
@@ -96,6 +97,10 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
     was used to find the interactive buttons.
 12. [Photopea:](https://www.photopea.com/)
     is an online photo editor and I used it to improve the colors of the background of the cards.
+13. [Ytmp3:](https://ytmp3.cc/)
+    used to convert the youtube video where the background song is found in, into mp3.
+14. [Mp3cut:](https://mp3cut.net/)
+    used to cut the converted track.
 
 ## Testing
 
@@ -128,21 +133,26 @@ Lighthouse in chrome was also used to test the website.
 -   The Website was tested on Google Chrome, Microsoft Edge and Safari browsers.
 -   Family members and friends were asked to test the website on their devices.
 -   The website was viewed on a variety of devices:
+
     Desktop:
     - HP Spectre Notebook
     - Sony VAIO Fit15E (laptop)
     - Acer Predator G5900 (computer)
     - ASUS 18363 (computer) 
+    - ASUS N73S (laptop)
 
     Mobile:
     - Samsung Galaxy A41
     - Samsung Galaxy S7 2017
     - Samsung Galaxy A70
     - Huawei Y60 2018
+    - Huawei P30 Pro
 
 ### Known Bugs
 
-- 
+- The cards flip too fast on mobile. I tried to fix it with the time out in JS, but then it flips too slowly on desktop.
+- When you find all the matches at 0 seconds, it shows both modals.
+- You do not see the background slide on the buttons clearly on mobile.
 
 ## Deployment
 
@@ -187,26 +197,50 @@ $ git clone https://github.com/kristinabog/greek-beaches-memory-game
 Bootstrap Library used throughout the project for the creation of the navbar, jumbotron, layout and responsiveness.
 
 -   [Freefrontend](https://codepen.io/atloomer/pen/JEaRWX):
-Used for the buttons: 'start the game' on the landing page, 'restart' and 'music' on the game.html
+Used for the buttons: 'start the game' on the landing page, 'restart' and 'music' in the game.html
 
 - Javascript for the game inspired by the following Youtube videos:
 
-[Inspiration for the shuffle function](https://www.youtube.com/watch?v=QrTCHHhoUQU&ab_channel=codeTonight)
+    [Inspiration for the shuffle function](https://www.youtube.com/watch?v=QrTCHHhoUQU&ab_channel=codeTonight)
 
-[Inspiration on the flip, match and reset functions](https://www.youtube.com/watch?v=ZniVgo8U7ek&ab_channel=freeCodeCamp.org)
+    [Inspiration on the flip, match and reset functions](https://www.youtube.com/watch?v=ZniVgo8U7ek&ab_channel=freeCodeCamp.org)
 
 -   [Code to not display extra white space of the right side of website](https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend)
 
 -   [Vertically aligning the modal](https://stackoverflow.com/questions/18053408/vertically-centering-bootstrap-modal-window)
 
+### Images
 
+You will find the pictures in this section by the name of the card image files from the folder 'cards'.
+gidaki.jpg is my own picture taken in Gidaki Beach in Ithaca.
 
+Pixabay.com:
 
+- [Apelles](https://pixabay.com/photos/greece-beach-sea-karpathos-3997319/): Apelles beach in karpathos
+- [Navagio](https://pixabay.com/photos/bay-navagio-navagio-bay-sea-greece-1266410/): Navagio Beach in Zakynthos
+- [Myrtos](https://pixabay.com/photos/kefalonia-myrtos-beach-greece-4316318/): Myrtos Beach in Kefalonia
+- [Landing page background](https://pixabay.com/photos/beach-greece-blue-lefkada-sea-2718897/)
 
+Other:
 
+- [Porto-katsiki](https://unsplash.com/photos/epiM8o5Wiug): Porto Katsiki Beach in lefkada
+- [Voutoumi](https://upload.wikimedia.org/wikipedia/commons/2/24/Voutoumi_beach_at_Antipaxoi_from_the_hill.jpg): Voutoumi Beach in Antipaxos
+- [Kolona](https://images.robertharding.com/zoom/RM/RH/HORIZONTAL/841-1096.jpg): Kolona Beach in Kythnos
+- [Stravnam](https://shutterstock.com): Stravnam Beach in Meganisi
+- [Background image on the cards and favicon](https://pixtastock.com)
 
+### Audio
 
+- [The background audio](https://www.youtube.com/watch?v=o5Y3nwtIdvw&ab_channel=MaximusConfese)
+    song was cut out of this video on youtube from 03:24.
 
+- All other soundeffects from [Zapsplat.com](https://www.zapsplat.com/)
 
+### Acknowledgements
 
+-   My Mentor for the helpful feedback.
+
+-   The Slack Code Institute community and Tutor support who helped me with bugs during the creation of the website.
+
+-   A thank you to family and friends that took the time to test the website.
 
