@@ -26,6 +26,59 @@ body {
     flex: 1 0 auto;
 }
 
+/* ----------- Landing Page */
+
+.callout-container {
+    height: 100vh;
+
+    background: url("../img/landing-bg.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    position: relative;
+}
+
+.jumbotron {
+    background-color: rgb(52, 61, 71, 0.8);
+    font-family: 'Montserrat', sans-serif;
+    max-width: 550px;
+}
+
+.jumbotron-header {
+    color: #fff;
+    font-weight: 400;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.jumbotron .lead {
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+#jb-header {
+    font-size: 13px;
+}
+
+#lead-header {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
 /* ----------- Footer */
 
 footer {
@@ -191,10 +244,6 @@ i.fab:hover {
 
 /* ------------------------------- Modals */
 
-.modal-backdrop {
-  background-color: rgb(133, 134, 134, O.5) !important;
-}
-
 .modal-content {
     background: #343d47;
     color: #fafafa;
@@ -276,16 +325,24 @@ i.fab:hover {
 
 @media only screen and (max-width: 420px) {
     
-    .button {
+    .button-width {
         width: 100px;
     }
 
     .h2, h2 {
-    font-size: 1.3rem;
+        font-size: 1.3rem;
     }
 
     .count-button {
         width: 100px; 
+    }
+
+    #jb-header {
+        font-size: 12px;
+    }
+
+    .jumbotron .lead {
+        margin-bottom: 20px;
     }
 }
 
@@ -298,6 +355,10 @@ i.fab:hover {
 
     .game {
         height: 800px;
+    }
+
+    #jb-header {
+        font-size: 11px;
     }
 }
 

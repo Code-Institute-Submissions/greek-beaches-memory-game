@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <script src="https://kit.fontawesome.com/c923bd6760.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/img/icon.jpg"/>
+    <title>Greek Beaches Memory Game</title>
 </head>
 <body>
-    
+    <div class="container-fluid callout-container justify-content-center">
+        <!-- Credit for the code used for the jumbotron: https://getbootstrap.com/docs/4.0/components/jumbotron/ -->
+            <section class="callout jumbotron text-center">
+                <h1 class="jumbotron-header">Welcome<br><span id="jb-header">to the Greek Beaches Memory Game</span></h1>
+                <hr class="block-divider">
+                <h2 id="lead-header">How to play</h2>
+                <p class="lead">
+                    Find 8 pairs of beauitful greek beaches within 60 seconds.
+                    The time starts running once you click on start the game.
+                    Click on a card and try to find the other matching card.
+                    Try and do it with the least amount of flips!
+                </p>
+                <span class="d-inline d-sm-none"><br></span>
+                <div class="button border button-2" onclick="location.href='game.html';" style="cursor: pointer;">
+                    <div class="slide"></div>
+                    <a href="game.html" stle="color: #fff!important;">Start the game</a>
+                </div>
+            </section>
+    </div>
 </body>
 </html>
