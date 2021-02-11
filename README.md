@@ -12,9 +12,9 @@ This game will inspire you to discover more of Greece in a fun way!
 ### User stories
 
 
-  - As a Visitor, I want to
+  - As a Visitor,
 
-    1. Before starting the game, I want to see an explanation of the game.
+    1. I want to see an explanation of the game, before I proceed to the game.
     2. When playing the game, I want to be challenged.
     3. I want to be able to play suitable music if I want to.
     4. I want to have the option to restart the game if I feel like I failed halfway.
@@ -77,7 +77,7 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
 ### Frameworks, Libraries & Programs Used
 
 1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-    was used to assist with the responsiveness and styling of the website and to make the navbar.
+    was used to assist with the responsiveness and styling of the website and to make the navbar and jumbotron on the landing page.
 2. [Google Fonts:](https://fonts.google.com/)
     were used to import the font-family 'Montserrat' into the style.css file.
 3. [Font Awesome:](https://fontawesome.com/)
@@ -96,6 +96,114 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
     was used to find the interactive buttons.
 12. [Photopea:](https://www.photopea.com/)
     is an online photo editor and I used it to improve the colors of the background of the cards.
+
+## Testing
+
+The following validators were used to make sure there were no syntax errors in the project.
+
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results]() 
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - 
+-   [BeautifyTools Javascript Validator](https://www.beautifytools.com/javascript-validator.php)
+
+Lighthouse in chrome was also used to test the website.
+-   [Results]()
+
+### Testing User Stories from User Experience (UX) Section
+
+-   #### Visitor Goals
+
+    1. As a Visitor, I want to see an explanation of the game, before I proceed to the game.
+    2. As a Visitor, when playing the game, I want to be challenged.
+    3. As a Visitor, I want to be able to play suitable music if I want to.
+    4. As a Visitor, I want to have the option to restart the game if I feel like I failed halfway.
+    5. As a Visitor, I want the website and the cards to be visually pleasing.
+    6. As a Visitor, when I don't finish the game in time, I want to easily restart the game.
+    7. As a Visitor, when I win the game, I want to see in how much time and flips I finished the game and restart if I want to improve.
+
+### Functional Testing
+
+
+### Further Testing
+
+-   The Website was tested on Google Chrome, Microsoft Edge and Safari browsers.
+-   Family members and friends were asked to test the website on their devices.
+-   The website was viewed on a variety of devices:
+    Desktop:
+    - HP Spectre Notebook
+    - Sony VAIO Fit15E (laptop)
+    - Acer Predator G5900 (computer)
+    - ASUS 18363 (computer) 
+
+    Mobile:
+    - Samsung Galaxy A41
+    - Samsung Galaxy S7 2017
+    - Samsung Galaxy A70
+    - Huawei Y60 2018
+
+### Known Bugs
+
+- 
+
+## Deployment
+
+### GitHub Pages
+
+I deployed the project to GitHub pages using the following steps:
+
+1. Log in to [GitHub](https://github.com/) and navigate yourself to the repository.
+2. At the top of the Repository, click on "Settings" in the menu.
+3. Scroll down the page until you find the "GitHub Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+5. The page will automatically refresh.
+6. Scroll back down the page to locate the now published [site](https://kristinabog.github.io/greek-beaches-memory-game/) in the "GitHub Pages" section.
+
+### Forking the GitHub Repository
+
+To view and/or to make changes to the repository without it affecting the original, you can fork the GitHub Repository with the following steps:
+
+1. Log in to [GitHub](https://github.com/) and navigate yourself to the repository.
+2. At the top of the Repository under the repo's name, above the "Settings" Button on the menu, click on the "Fork" Button.
+3. You will now find a copy of the original in your account.
+
+### Making a Local Clone
+
+1. Log in to [GitHub](https://github.com/) and navigate yourself to the repository.
+2. Click the 'Code' dropdown above the file list.
+3. Copy the URL for the repository.
+4. Open Git Bash
+5. Change the current working directory to where you want the cloned directory.
+6. Type git clone in the CLI and then paste the URL you copied earlier.
+   It should look like this:
+```
+$ git clone https://github.com/kristinabog/greek-beaches-memory-game
+```
+7. Press enter to create clone
+
+## Credits
+
+### Code
+
+-   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): 
+Bootstrap Library used throughout the project for the creation of the navbar, jumbotron, layout and responsiveness.
+
+-   [Freefrontend](https://codepen.io/atloomer/pen/JEaRWX):
+Used for the buttons: 'start the game' on the landing page, 'restart' and 'music' on the game.html
+
+- Javascript for the game inspired by the following Youtube videos:
+
+[Inspiration for the shuffle function](https://www.youtube.com/watch?v=QrTCHHhoUQU&ab_channel=codeTonight)
+
+[Inspiration on the flip, match and reset functions](https://www.youtube.com/watch?v=ZniVgo8U7ek&ab_channel=freeCodeCamp.org)
+
+-   [Code to not display extra white space of the right side of website](https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend)
+
+-   [Vertically aligning the modal](https://stackoverflow.com/questions/18053408/vertically-centering-bootstrap-modal-window)
+
+
+
+
+
+
 
 
 
