@@ -247,11 +247,12 @@ i.fab:hover {
 .modal-content {
     background: #343d47;
     color: #fafafa;
-    font-size: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .modal-title {
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .modal-body p {
