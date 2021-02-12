@@ -106,9 +106,24 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
 
 The following validators were used to make sure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results]() 
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - 
--   [BeautifyTools Javascript Validator](https://www.beautifytools.com/javascript-validator.php)
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    Tells me the following error on every card:
+    Bad value for attribute src on element img: Must be non-empty.
+    Keeping the src empty in HTML, but filling this space up with Javascript, is the way I made the shuffeling work.
+
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - No errors
+
+-   [JSHint](https://jshint.com/)
+    I get 25 warnings, mostly repeating, about some features that are only available in ES6 or Mozilla JS extensions.
+    Warnings are:
+
+    - 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+    - 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+    - 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+    - 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+
+    I also get that the 2 '$' used as jQuery to call the modals, are undefined variables.
+
 
 Lighthouse in chrome was also used to test the website.
 -   [Results]()
@@ -131,6 +146,7 @@ Lighthouse in chrome was also used to test the website.
 ### Further Testing
 
 -   The Website was tested on Google Chrome, Microsoft Edge and Safari browsers.
+-   The website was tested on all device sizes that are viewable in DevTools.
 -   Family members and friends were asked to test the website on their devices.
 -   The website was viewed on a variety of devices:
 
@@ -150,7 +166,7 @@ Lighthouse in chrome was also used to test the website.
 
 ### Known Bugs
 
-- The cards flip too fast on mobile. I tried to fix it with the time out in JS, but then it flips too slowly on desktop.
+- The cards flip too fast on mobile. I tried to fix it with the time out in JS, but then it flips too slowly on desktop. Eventually gave the flipping a time out of 100.
 - When you find all the matches at 0 seconds, it shows both modals.
 - You do not see the background slide on the buttons clearly on mobile.
 
@@ -212,6 +228,7 @@ Used for the buttons: 'start the game' on the landing page, 'restart' and 'music
 ### Images
 
 You will find the pictures in this section by the name of the card image files from the folder 'cards'.
+
 gidaki.jpg is my own picture taken in Gidaki Beach in Ithaca.
 
 Pixabay.com:
@@ -232,7 +249,7 @@ Other:
 ### Audio
 
 - [The background audio](https://www.youtube.com/watch?v=o5Y3nwtIdvw&ab_channel=MaximusConfese)
-    song was cut out of this video on youtube from 03:24.
+    was cut out of this video on youtube from 03:24.
 
 - All other soundeffects from [Zapsplat.com](https://www.zapsplat.com/)
 
@@ -240,7 +257,7 @@ Other:
 
 -   My Mentor for the helpful feedback.
 
--   The Slack Code Institute community and Tutor support who helped me with bugs during the creation of the website.
+-   A very big thank you to the Tutor support who helped me solve bugs.
 
 -   A thank you to family and friends that took the time to test the website.
 
