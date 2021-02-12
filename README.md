@@ -58,9 +58,9 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
 
 
 ### Skeleton
-- Desktop, tablet and phone Wireframes of the game - [View](/assets/img/wireframe1.jpg)
-- Start modal wireframes - [View](/assets/img/wireframe2.jpg)
-- Win and game over wireframes - [View](/assets/img/wireframe3.jpg)
+- Desktop, tablet and phone Wireframes of the game - [View](assets/img/wireframe1.jpg)
+- Start modal wireframes - [View](assets/img/wireframe2.jpg)
+- Win and game over wireframes - [View](assets/img/wireframe3.jpg)
 
 
 ## Features
@@ -147,14 +147,14 @@ Lighthouse in chrome was also used to test the website.
 
     1. As a Visitor, I want to see an explanation of the game, before I proceed to the game.
 
-    The explanation is showed in a jumbotron on the landing page before proceeding to the game.
-    ![user-story 1](assets/img/user-story1.png)
+        The explanation is showed in a jumbotron on the landing page before proceeding to the game.
+        ![user-story 1](assets/img/user-story1.png)
 
     2. As a Visitor, when playing the game, I want to be challenged.
 
-    There will be a countdown of 60 seconds once starting the game and testers have often told me the fact
-    the beaches look similar it made it more challenging for them.
-    ![user-story 2](assets/img/user-story2.png)
+        There will be a countdown of 60 seconds once starting the game and testers have often told me the fact
+        the beaches look similar that it made it more challenging for them.
+        ![user-story 2](assets/img/user-story2.png)
 
     3. As a Visitor, I want to be able to play suitable music if I want to.
 
@@ -183,6 +183,19 @@ Lighthouse in chrome was also used to test the website.
 
 ### Functional Testing
 
+| Action        | Expected Behaviour         | Pass/Fail  |
+| ------------- |:-------------:| -----:|
+| Click on 'start the game' button on index.html| brings you to game.html | Pass |
+| Click on one of the cards | Card flips, shows an image, makes flip sound and flip counter calculates +1| Pass|
+| 2 flipped cards do not match | Cards flip back| Pass|
+| 2 flipped cards match | cards stay flipped and  are not clickable anymore | Pass|
+| Click Music button | Music starts playing and icon changes in mute icon|Pass|
+| Click Music button with mute icon | Music pauses and icon changes in play icon|Pass|
+| Time is 0 seconds | Game over modal shows up and game over soundeffect plays|Pass|
+| Click on 'start again' in game over modal | game.html refreshes|Pass|
+| All cards are flipped | Win modal shows up and win soundeffect plays |Pass|
+| Click on 'start again' in win modal | game.html refreshes|Pass|
+
 
 ### Further Testing
 
@@ -204,12 +217,13 @@ Lighthouse in chrome was also used to test the website.
     - Samsung Galaxy A70
     - Huawei Y60 2018
     - Huawei P30 Pro
+    - Xiaomi mi 9 SE
 
 ### Known Bugs
 
-- The cards flip too fast on mobile. I tried to fix it with the time out in JS, but then it flips too slowly on desktop. Eventually gave the flipping a time out of 100.
+- The cards flip too fast on mobile. I tried to fix it with the time out in JS, but then it flips too slowly on desktop. Eventually gave the flipping a time out of 10, which improves it a little bit.
 - When you find all the matches at 0 seconds, it shows both modals.
-- You do not see the background slide on the buttons clearly on mobile.
+- You do not see the background slide clearly on the buttons on mobile.
 
 ## Deployment
 
@@ -265,6 +279,8 @@ Used for the buttons: 'start the game' on the landing page, 'restart' and 'music
 -   [Code to not display extra white space of the right side of website](https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend)
 
 -   [Vertically aligning the modal](https://stackoverflow.com/questions/18053408/vertically-centering-bootstrap-modal-window)
+
+- [Stackoverflow](https://stackoverflow.com/) and [w3schools](https://w3schools.com/) were often used to look up short pieces of code
 
 ### Images
 
