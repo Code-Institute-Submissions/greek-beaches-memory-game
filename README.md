@@ -1,9 +1,14 @@
 <h1 align="center">Greek Beaches Memory Game</h1>
 
+
 For my milestone project 2, I have made a memory card game with a greek theme.
 With every card you click you will discover another beautiful beach in Greece. 
 For this game I have chosen my favourite, less touristic and less known beaches around Greece.
 This game will inspire you to discover more of Greece in a fun way!
+
+[View Live Website](https://kristinabog.github.io/greek-beaches-memory-game/)
+
+## Table of Content
 
 
 
@@ -107,13 +112,20 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
 The following validators were used to make sure there were no syntax errors in the project.
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-    Tells me the following error on every card:
-    Bad value for attribute src on element img: Must be non-empty.
-    Keeping the src empty in HTML, but filling this space up with Javascript, is the way I made the shuffeling work.
+    - index.html:
+        no errors
+    - game.html:
+        
+        Tells me the following error on every card:
+        Bad value for attribute src on element img: Must be non-empty.
+        Keeping the src empty in HTML, but filling this space up with Javascript, is the way I made the shuffeling work.
 
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - No errors
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    
+    - [Result](assets/img/css-validator.png)
 
 -   [JSHint](https://jshint.com/)
+    
     I get 25 warnings, mostly repeating, about some features that are only available in ES6 or Mozilla JS extensions.
     Warnings are:
 
@@ -126,7 +138,8 @@ The following validators were used to make sure there were no syntax errors in t
 
 
 Lighthouse in chrome was also used to test the website.
--   [Results]()
+-   [Results index.html](assets/img/lighthouse-index.png)
+-   [Results game.html](assets/img/lighthouse-game.png)
 
 ### Testing User Stories from User Experience (UX) Section
 
