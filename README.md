@@ -8,7 +8,17 @@ This game will inspire you to discover more of Greece in a fun way!
 
 [View Live Website](https://kristinabog.github.io/greek-beaches-memory-game/)
 
+![Responsiveness](assets/img/responsive.png)
+
 ## Table of Content
+
+- [User Experience](#user-experience-(ux))
+- [Features](#features)
+- [Technologies used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+
 
 
 
@@ -148,22 +158,26 @@ Lighthouse in chrome was also used to test the website.
     1. As a Visitor, I want to see an explanation of the game, before I proceed to the game.
 
         The explanation is showed in a jumbotron on the landing page before proceeding to the game.
+        
         ![user-story 1](assets/img/user-story1.png)
 
     2. As a Visitor, when playing the game, I want to be challenged.
 
         There will be a countdown of 60 seconds once starting the game and testers have often told me the fact
         the beaches look similar that it made it more challenging for them.
+        
         ![user-story 2](assets/img/user-story2.png)
 
     3. As a Visitor, I want to be able to play suitable music if I want to.
 
         Music will only be played when clicking on the 1st music button, and can be paused clicking on the 2nd that appeared after clicking on the 1st.
+        
         ![user-story 3](assets/img/user-story3.png)
 
     4. As a Visitor, I want to have the option to restart the game if I feel like I failed halfway.
 
         In the navbar there is a restart button.
+
         ![user-story 4](assets/img/user-story4.png)
 
     5. As a Visitor, I want the website and the cards to be visually pleasing.
@@ -174,11 +188,13 @@ Lighthouse in chrome was also used to test the website.
     6. As a Visitor, when I don't finish the game in time, I want to easily restart the game.
     
         When losing the game the following modal will show up
+        
         ![lose modal](assets/img/user-story6.png)
 
     7. As a Visitor, when I win the game, I want to see in how much time and flips I finished the game and restart if I want to improve.
 
         When winning the game the following modal will appear:
+        
         ![win modal](assets/img/user-story7.png)
 
 ### Functional Testing
