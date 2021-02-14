@@ -228,8 +228,10 @@ function gameOver() {
     setTimeout(() => {
         stopMusic();
         gameOverSound();
+        if ($('#win-modal').modal('hide')) {
         $('#game-over-modal').modal('show');
-    }, 1000);
+        }
+    }, 700);
 }
 
 
