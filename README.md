@@ -68,9 +68,9 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
 
 
 ### Skeleton
-- Desktop, tablet and phone Wireframes of the game - [View](assets/img/wireframe1.jpg)
-- Start modal wireframes - [View](assets/img/wireframe2.jpg)
-- Win and game over wireframes - [View](assets/img/wireframe3.jpg)
+- Desktop, tablet and phone Wireframes of the game - [View](assets/img/wireframe1.pdf)
+- Start modal wireframes - [View](assets/img/wireframe2.pdf)
+- Win and game over wireframes - [View](assets/img/wireframe3.pdf)
 
 
 ## Features
