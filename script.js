@@ -111,18 +111,16 @@ function flip() {
 
     if (this === cardOne) return;
 
-    let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+    let isMobile = window.matchMedia("only screen and (max-width: 1025px)").matches;
 
     if (isMobile) {
         setTimeout(() => {
             this.style.transform = 'rotateY(180deg)';
-        }, 500);
+        }, 175);
+    } else {
+        this.style.transform = 'rotateY(180deg)';
     }
-
-    setTimeout(() => {
-    this.style.transform = 'rotateY(180deg)';
-    }, 120);
-
+   
     document.getElementById('counter').innerText = counter;
     counter++;
 
@@ -136,7 +134,6 @@ function flip() {
         
         checkMatch();
     }
-
 }
 
 
@@ -245,9 +242,7 @@ function gameOver() {
     setTimeout(() => {
         stopMusic();
         gameOverSound();
-        if ($('#win-modal').modal('hide')) {
         $('#game-over-modal').modal('show');
-        }
     }, 700);
 }
 

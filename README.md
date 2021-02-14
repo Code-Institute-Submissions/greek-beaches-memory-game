@@ -122,7 +122,9 @@ The following validators were used to make sure there were no syntax errors in t
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
     - index.html:
+
         no errors
+
     - game.html:
         
         Tells me the following error on every card:
@@ -133,18 +135,8 @@ The following validators were used to make sure there were no syntax errors in t
     
     - [Result](assets/img/css-validator.png)
 
--   [JSHint](https://jshint.com/)
+-   [JSHint](https://jshint.com/) - No errors
     
-    I get 25 warnings, mostly repeating, about some features that are only available in ES6 or Mozilla JS extensions.
-    Warnings are:
-
-    - 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-    - 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-    - 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
-    - 'template literal syntax' is only available in ES6 (use 'esversion: 6').
-
-    I also get that the 2 '$' used as jQuery to call the modals, are undefined variables.
-
 
 Lighthouse in chrome was also used to test the website.
 -   [Results index.html](assets/img/lighthouse-index.png)
@@ -236,8 +228,7 @@ Lighthouse in chrome was also used to test the website.
 
 ### Known Bugs
 
-- The cards flip too fast on mobile. I tried to fix it with the time out in JS, but then it flips too slowly on desktop. Eventually gave the flipping a time out of 10, which improves it a little bit.
-- When you find all the matches at 0 seconds, it shows both modals.
+- When you find all the matches at 0 seconds, it shows both modals. Tried to fix it with if statements but did not work.
 - You do not see the background slide clearly on the buttons on mobile.
 
 ## Deployment
