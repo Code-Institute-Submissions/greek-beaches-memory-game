@@ -116,7 +116,7 @@ function flip() {
     if (isMobile) {
         setTimeout(() => {
             this.style.transform = 'rotateY(180deg)';
-        }, 175);
+        }, 150);
     } else {
         this.style.transform = 'rotateY(180deg)';
     }
@@ -224,12 +224,12 @@ function shuffleImages() {
 /**
  * Shows a modal when the game is won
  */
-function winGame() { 
+function winGame() {
+         clearInterval(interval); 
     setTimeout(() => {       
         stopMusic();
         $('#win-modal').modal('show');
         document.getElementById("win-text").insertAdjacentHTML('beforeend', `You have won the game with ${counter} flips and ${timeLeft} seconds left!`);
-        clearInterval(interval);
         winSound();
     }, 1000);
 }

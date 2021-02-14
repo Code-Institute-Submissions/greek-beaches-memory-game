@@ -123,7 +123,7 @@ The following validators were used to make sure there were no syntax errors in t
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
     - index.html:
 
-        no errors
+        No errors
 
     - game.html:
         
@@ -228,8 +228,17 @@ Lighthouse in chrome was also used to test the website.
 
 ### Known Bugs
 
-- When you find all the matches at 0 seconds, it shows both modals. Tried to fix it with if statements but did not work.
-- You do not see the background slide clearly on the buttons on mobile.
+- When you find all the matches at 1 second left, it shows both modals. 
+
+    I fixed this by putting the 'clearInterval(interval);' outside of the 'setTimeout' in the winGame function.
+- The cards flip too fast on mobile. 
+    
+    I fixed this by inserting the following variable:
+    
+    let isMobile = window.matchMedia("only screen and (max-width: 1025px)").matches
+    
+    and writing an if statement with it from line 116.
+- You do not see the background slide clearly on the buttons on mobile, because it is a hover effect.
 
 ## Deployment
 
