@@ -2,7 +2,6 @@
 
 // Inspiration on the flip, match and reset functions https://www.youtube.com/watch?v=ZniVgo8U7ek&ab_channel=freeCodeCamp.org
 
-// --------------------- Variables
 
 const cards = document.querySelectorAll('.card');
 let timer = document.getElementById("timer");
@@ -20,25 +19,26 @@ let interval;
 counter = 1;
 
 
-// --------------------- Functions 
-
-// Content loaded
-
+/**
+ * Content loaded
+ */
 document.addEventListener("DOMContentLoaded", function() { 
     shuffleImages();
     startTimer();
     timeLeft = 60;
 });
 
-// Refreshes the page when clicked on the restart button
-
+ 
+/**
+ * Refreshes the page when clicked on the restart button
+ */
 function restart() {
     location.reload();
 }
 
 // --------------------- Music
 
-var bgAudio = new Audio('assets/audio/greek.mp3');
+const bgAudio = new Audio('assets/audio/greek.mp3');
 
 /**
  * checks if the music is on or off
@@ -56,8 +56,9 @@ function bgMusic() {
     }
 }
 
-// functions to play the background music and sound effects
-
+/**
+ * functions to play the background music and sound effects
+ */
 function startBgMusic() {
     bgAudio.play();
     bgAudio.volume = 0.3;
@@ -83,8 +84,10 @@ function winSound() {
     winAudio.play();
 }
 
-// Starts the 60 seconds countdown
 
+/**
+ * Starts the 60 seconds countdown
+ */
 function startTimer() {
         interval = setInterval(() => {
             timeLeft--;
@@ -96,8 +99,10 @@ function startTimer() {
         }, 1000);
     }
 
-// Flipping the cards 
 
+/**
+ * Flipping the cards 
+ */
 function flip() {
     
     flipSound();
@@ -134,8 +139,10 @@ function flip() {
 
 }
 
-// Do the card's src's match?
 
+/**
+ * Do the card's src's match?
+ */
 function checkMatch() {
     if (cardOne.childNodes[1].src === cardTwo.childNodes[1].src) {
 
@@ -147,8 +154,10 @@ function checkMatch() {
     }
 }
 
-// Cards match so push them in the cardPair array
 
+/**
+ * Cards match, so push them in the cardPair array
+ */
 function match() {
 
     cardOne.removeEventListener('click', flip);
@@ -164,7 +173,7 @@ function match() {
 
 
 /**
- * Cards do not match so unlfip them
+ * Cards do not match, so unlfip them
  */
 function unMatch() {
 
@@ -178,8 +187,10 @@ function unMatch() {
     }, 1100);
 }
 
-// Resets the variables
 
+/**
+ * Resets the variables
+ */
 function reset() {
 
     flipped = false;
@@ -189,8 +200,10 @@ function reset() {
 }
 
 
-// Shuffles the src links
 
+/**
+ * Shuffles the src links
+ */
 function shuffleImages() {
     let srcs = ['cards/apelles.jpg', 'cards/apelles.jpg', 'cards/gidaki.jpg', 'cards/gidaki.jpg', 'cards/kolona.jpg', 'cards/kolona.jpg', 
     'cards/stravnam.png', 'cards/stravnam.png', 'cards/myrtos.jpg', 'cards/myrtos.jpg', 'cards/navagio.jpg', 'cards/navagio.jpg', 
@@ -210,8 +223,10 @@ function shuffleImages() {
         }
 }
 
-// Shows a modal when the game is won
-
+ 
+/**
+ * Shows a modal when the game is won
+ */
 function winGame() { 
     setTimeout(() => {       
         stopMusic();
@@ -222,8 +237,10 @@ function winGame() {
     }, 1000);
 }
 
-// Shows a modal when the game is lost
 
+/**
+ * Shows a modal when the game is lost
+ */
 function gameOver() {
     setTimeout(() => {
         stopMusic();
@@ -235,7 +252,9 @@ function gameOver() {
 }
 
 
-// Event Listeners
+/**
+ * Event Listeners
+ */
 cards.forEach(card => card.addEventListener('click', flip));
 restartButton.addEventListener('click', restart);
 musicBtn.addEventListener('click', bgMusic);
