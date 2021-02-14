@@ -40,8 +40,9 @@ function restart() {
 
 var bgAudio = new Audio('assets/audio/greek.mp3');
 
-// checks if the music is on or off 
-
+/**
+ * checks if the music is on or off
+ */
 function bgMusic() {
     let iconClasses = Array.from(musicIcon.classList);
     if (iconClasses.includes("fa-play")) {
@@ -68,17 +69,17 @@ function stopMusic() {
 }
 
 function flipSound() {
-    var flipSound = new Audio('assets/audio/card-flip.mp3');
+    const flipSound = new Audio('assets/audio/card-flip.mp3');
     flipSound.play();
 }
 
 function gameOverSound() {
-    var gameOverAudio = new Audio('assets/audio/lose.mp3');
+    const gameOverAudio = new Audio('assets/audio/lose.mp3');
     gameOverAudio.play();
 }
 
 function winSound() {
-    var winAudio = new Audio('assets/audio/win.mp3');
+    const winAudio = new Audio('assets/audio/win.mp3');
     winAudio.play();
 }
 
@@ -105,13 +106,20 @@ function flip() {
 
     if (this === cardOne) return;
 
+    let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+
+    if (isMobile) {
+        setTimeout(() => {
+            this.style.transform = 'rotateY(180deg)';
+        }, 500);
+    }
+
     setTimeout(() => {
     this.style.transform = 'rotateY(180deg)';
     }, 120);
 
     document.getElementById('counter').innerText = counter;
     counter++;
-   
 
     if(!flipped) {
         flipped = true;
@@ -154,8 +162,10 @@ function match() {
     }
 }
 
-// Cards do not match so unlfip them
 
+/**
+ * Cards do not match so unlfip them
+ */
 function unMatch() {
 
     blockCards = true;
