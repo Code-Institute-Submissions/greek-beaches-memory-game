@@ -115,6 +115,8 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
     used to convert the youtube video where the background song is found in, into mp3.
 14. [Mp3cut:](https://mp3cut.net/)
     used to cut the converted track.
+15. [JQuery:](https://jquery.com/)
+    was used to call the modals in script.js
 
 ## Testing
 
