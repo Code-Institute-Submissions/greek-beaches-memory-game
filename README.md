@@ -35,7 +35,7 @@ This game will inspire you to discover more of Greece in a fun way!
     4. I want to have the option to restart the game if I feel like I failed halfway.
     5. I want the website and the cards to be visually pleasing.
     6. When I don't finish the game in time, I want to easily restart the game.
-    7. When I win the game, I want to see in how much time and flips I finished the game and restart if I want to improve.
+    7. When I win the game, I want to see in how much time and flips I finished the game and restart, if I want to improve.
 
 
 ### Strategy
@@ -46,7 +46,7 @@ Instead of using pictures of well known greek beaches, the cards shows less tour
 The game is challenging because the pictures of the beaches look similar and you only have 60 seconds to find them all.
 
 ### Structure
-When opening the website you will be welcomed by a landing page, which will show a very nice background and a jumbotron with the game instructions and a button to start the game.
+When opening the website you will be welcomed by a landing page, which will show a very nice background, a jumbotron with the game instructions and a button to start the game.
 The game will have a navbar with 2 modern looking buttons in the middle. One to restart the game, and the other one to start or pause the music.
 Music will not autoplay for a better user experience. The game container has 4x4 cards with a greek style but simple background. 
 The cards will be as wide as possible to prevent pixellation. Above the cards you will find the timer and the flip counter.
@@ -92,7 +92,7 @@ I wanted to make a modern, symmetric, and visually pleasing looking game. I want
 ### Frameworks, Libraries & Programs Used
 
 1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-    was used to assist with the responsiveness and styling of the website and to make the navbar and jumbotron on the landing page.
+    was used to assist with the responsiveness and styling of the website and to make the navbar and jumbotron.
 2. [Google Fonts:](https://fonts.google.com/)
     were used to import the font-family 'Montserrat' into the style.css file.
 3. [Font Awesome:](https://fontawesome.com/)
@@ -133,9 +133,11 @@ The following validators were used to make sure there were no syntax errors in t
 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
     
-    - [Result](assets/img/css-validator.png)
+    No errors
 
--   [JSHint](https://jshint.com/) - No errors
+-   [JSHint](https://jshint.com/)
+
+    No errors
     
 
 Lighthouse in chrome was also used to test the website.
@@ -192,15 +194,15 @@ Lighthouse in chrome was also used to test the website.
 
 | Action        | Expected Behaviour         | Pass/Fail  |
 | ------------- |:-------------:| -----:|
-| Click on 'start the game' button on index.html| brings you to game.html | Pass |
+| Click on 'start the game' button on index.html| Brings you to game.html | Pass |
 | Click on one of the cards | Card flips, shows an image, makes flip sound and flip counter calculates +1| Pass|
 | 2 flipped cards do not match | Cards flip back| Pass|
-| 2 flipped cards match | cards stay flipped and  are not clickable anymore | Pass|
+| 2 flipped cards match | Cards stay flipped and  are not clickable anymore | Pass|
 | Click Music button | Music starts playing and icon changes in mute icon|Pass|
 | Click Music button with mute icon | Music pauses and icon changes in play icon|Pass|
-| Time is 0 seconds | Game over modal shows up and game over soundeffect plays|Pass|
+| Time is 0 seconds | Game over modal shows up, background music stops and game over soundeffect plays|Pass|
 | Click on 'start again' in game over modal | game.html refreshes|Pass|
-| All cards are flipped | Win modal shows up and win soundeffect plays |Pass|
+| All cards are flipped | Timer stops, win modal shows up, background music stops and win soundeffect plays |Pass|
 | Click on 'start again' in win modal | game.html refreshes|Pass|
 
 
@@ -283,7 +285,7 @@ $ git clone https://github.com/kristinabog/greek-beaches-memory-game
 Bootstrap Library used throughout the project for the creation of the navbar, jumbotron, layout and responsiveness.
 
 -   [Freefrontend](https://codepen.io/atloomer/pen/JEaRWX):
-Used for the buttons: 'start the game' on the landing page, 'restart' and 'music' in the game.html
+Used for the buttons: 'start the game' on the landing page, 'restart' and 'music' in game.html
 
 - Javascript for the game inspired by the following Youtube videos:
 
@@ -291,7 +293,7 @@ Used for the buttons: 'start the game' on the landing page, 'restart' and 'music
 
     [Inspiration on the flip, match and reset functions](https://www.youtube.com/watch?v=ZniVgo8U7ek&ab_channel=freeCodeCamp.org)
 
--   [Code to not display extra white space of the right side of website](https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend)
+-   [Code to not display extra white space on the right side of the website](https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend)
 
 -   [Vertically aligning the modal](https://stackoverflow.com/questions/18053408/vertically-centering-bootstrap-modal-window)
 

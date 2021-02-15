@@ -1,4 +1,7 @@
-/* code to not display extra white space of the right side of website
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+
+/* code to not display extra white space on the right side of website
 credit: https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend */
 
 html, body {
@@ -8,11 +11,6 @@ html, body {
     padding: 0px;
     overflow-x: hidden; 
 }
-
-
-/* -------------------- Font */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
 
 /*--------------------- General Styling */
 

@@ -181,7 +181,7 @@ function unMatch() {
     cardTwo.style.transform = 'rotateY(0deg)';
 
     reset();
-    }, 1100);
+    }, 1000);
 }
 
 
